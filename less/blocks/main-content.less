@@ -1,0 +1,19 @@
+.main-content {
+  .container();
+  padding-top: 45px;
+  padding-bottom: 89px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+@media (max-width: 735px) {
+  .main-content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0;
+  }
+}

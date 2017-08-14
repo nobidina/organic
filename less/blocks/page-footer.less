@@ -1,0 +1,23 @@
+.page-footer {
+  padding-top: 40px;
+  padding-bottom: 220px;
+  background-color: #e77471;
+}
+.page-footer__content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  .container();
+}
+
+@media (max-width: 735px) {
+  .page-footer {
+    padding-bottom: 40px;
+  }
+  .page-footer__content-wrapper {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}

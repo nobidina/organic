@@ -1,19 +1,16 @@
 (function() {
     var carousel = {
-        arrows: document.querySelectorAll('.review__control'),
+        parent: document.querySelector('.slider__slides'),
+        arrows: document.querySelectorAll('.slider__control'),
+        rightArrowClass: 'slider__control-right',
         current: 0,
         items: document.querySelectorAll('.slider__slide'),
         init: function() {
             var self = this;
 
-            document.querySelectorAll('.slider__control').forEach(function(item) {
-              item.classList.remove('slider__control_no-js');
-            });
-
             this.arrows.forEach(function(item) {
-                item.classList.remove('review__arrow_no-js');
                 item.onclick = function() {
-                    if (item.classList.contains('review__control_right'))
+                    if (item.classList.contains(self.rightArrowClass))
                         self.step('next');
                     else
                         self.step('prev');
@@ -36,7 +33,11 @@
                         this.current++;
                 break;
             }
-            document.querySelector('.slider__control_' + (this.current + 1)).click();
+
+            var itemWidth = this.items[0] && this.items[0].offsetWidth || 0;
+
+            this.parent.style.transform =
+              'translate(-' + (this.current) * itemWidth + 'px)';
         }
     };
 

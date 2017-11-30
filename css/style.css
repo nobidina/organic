@@ -928,6 +928,7 @@ img {
   height: 30px;
   padding: 0;
   border: none;
+  border-radius: 0;
   background: #fe992a;
   font-family: "lato-bold", "Arial", sans-serif;
   font-size: 12px;

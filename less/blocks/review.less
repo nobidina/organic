@@ -1,26 +1,30 @@
 .review {
   width: 250px;
   margin-right: 6%;
-}
-.review__text {
-  margin: 0;
 
-  font-family: @font-italic;
-  font-size: 20px;
-  color: @font-red;
-}
-.review__icon {
-  display: block;
-  box-sizing: border-box;
-  height: 28px;
-  font-family: @font-italic;
-  font-size: 48px;
-  line-height: 48px;
-  color: @font-red;
-  &_right {
-    padding-left: 70px;
+  &__text {
+    margin: 0;
+  
+    font-family: @font-italic;
+    font-size: 20px;
+    color: @font-red;
+  }
+
+  &__icon {
+    display: block;
+    box-sizing: border-box;
+    height: 28px;
+    font-family: @font-italic;
+    font-size: 48px;
+    line-height: 48px;
+    color: @font-red;
+  
+    &_right {
+      padding-left: 70px;
+    }
   }
 }
+
 @media (max-width: 768px) {
   .review {
     flex-shrink: 0;
